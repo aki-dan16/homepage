@@ -109,6 +109,29 @@ section{padding:8rem 4rem}
 .support-card h3{font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--white);font-weight:500;line-height:1.6;margin-bottom:1.2rem}
 .support-card p{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.9;font-weight:300}
 
+/* APPS */
+.apps{background:var(--ink)}
+.apps-inner{max-width:1100px;margin:0 auto}
+.apps .section-title{color:var(--white)}
+.apps .section-sub{color:rgba(255,255,255,0.5)}
+.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-top:4rem}
+.app-card{background:var(--ink);padding:2.2rem 2rem;transition:background 0.2s}
+.app-card:hover{background:rgba(255,255,255,0.04)}
+.app-card-wide{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start}
+.app-card-wide .app-merits{columns:2;gap:1.5rem}
+.app-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.2rem}
+.app-icon{font-size:1.8rem;line-height:1;flex-shrink:0;margin-top:0.1rem}
+.app-name{font-family:'Shippori Mincho',serif;font-size:1.05rem;color:var(--white);font-weight:500;line-height:1.4;margin-bottom:0.3rem}
+.app-client{font-size:0.68rem;color:var(--gold);letter-spacing:0.05em}
+.app-desc{font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.85;margin-bottom:1.2rem;font-weight:300}
+.app-merits{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.2rem}
+.app-merits li{font-size:0.75rem;color:rgba(255,255,255,0.6);padding-left:1rem;position:relative;line-height:1.6;font-weight:300}
+.app-merits li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+.app-tag{font-size:0.65rem;color:var(--gold);letter-spacing:0.08em;border:1px solid rgba(184,146,58,0.25);display:inline-block;padding:0.25rem 0.7rem}
+.apps-cta{margin-top:4rem;border-top:1px solid rgba(255,255,255,0.07);padding-top:4rem}
+.apps-cta-inner{text-align:center}
+.apps-cta-text{font-size:0.9rem;color:rgba(255,255,255,0.5);line-height:1.9;margin-bottom:2rem;font-weight:300}
+
 /* PROCESS */
 .process{background:var(--paper)}
 .process-inner{max-width:1100px;margin:0 auto}
@@ -156,7 +179,9 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
   .hero{padding:7rem 1.5rem 5rem}
   .hero-stats{gap:2rem;flex-wrap:wrap}
   .about-inner,.support-inner{grid-template-columns:1fr;gap:3rem}
-  .results-grid,.services-grid{grid-template-columns:1fr}
+  .results-grid,.services-grid,.apps-grid{grid-template-columns:1fr}
+  .app-card-wide{grid-template-columns:1fr}
+  .app-card-wide .app-merits{columns:1}
   .steps{grid-template-columns:1fr 1fr;gap:2rem}
   .steps::before{display:none}
   .form-row{grid-template-columns:1fr}
@@ -172,6 +197,7 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
     <a href="#about">プロフィール</a>
     <a href="#results">実績</a>
     <a href="#services">サービス</a>
+    <a href="#apps">アプリ開発</a>
     <a href="#process">進め方</a>
     <a href="#contact">お問い合わせ</a>
   </div>
@@ -373,6 +399,123 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
       <div class="support-card-label">COMMITMENT</div>
       <h3>計画を作るだけでなく、実行・定着・立て直しまで。</h3>
       <p>「正しいが実行されない提案」が生まれる構造を、経営と現場の両側から理解しています。そのため、理想論ではなく現場が受け入れられる形に落とし込み、定着させることを重視して行動してきました。</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPS -->
+<section class="apps" id="apps">
+  <div class="apps-inner">
+    <div class="fade-in">
+      <div class="section-label"><span></span><p>アプリ開発</p></div>
+      <h2 class="section-title">御社専用の業務アプリを、<br>一から作ります。</h2>
+      <p class="section-sub">アメリカ進出後の現場で本当に必要なツールは、既存のアプリには存在しないことがほとんどです。多国籍スタッフ・現地の商習慣・日本語対応——すべてを踏まえた業務アプリを、実際に現場で使い続けてきた経験をもとに開発します。</p>
+    </div>
+
+    <div class="apps-grid fade-in">
+
+      <div class="app-card">
+        <div class="app-header">
+          <div class="app-icon">💬</div>
+          <div>
+            <div class="app-name">多言語スタッフチャット</div>
+            <div class="app-client">Steak Teppei（ハワイ）導入実績</div>
+          </div>
+        </div>
+        <div class="app-desc">日本語・英語・中国語が混在するスタッフ間のコミュニケーションを、AIがリアルタイムで翻訳。メッセージを送ると全員が自分の言語で読める。既製品のチャットアプリでは対応できない多言語・多文化チームの課題を解決。</div>
+        <ul class="app-merits">
+          <li>送信と同時にAIが3言語へ自動翻訳</li>
+          <li>文脈を読んだ高精度翻訳（主語・目的語を補完）</li>
+          <li>画像送信・既読確認・@メンション対応</li>
+          <li>PIN認証でインストール不要・iPhoneのホーム画面から起動</li>
+          <li>管理者パネルで発言削除・アナウンス配信が可能</li>
+        </ul>
+        <div class="app-tag">PWA / Firebase / Gemini AI</div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-header">
+          <div class="app-icon">📦</div>
+          <div>
+            <div class="app-name">業者発注管理アプリ</div>
+            <div class="app-client">Steak Teppei（ハワイ）導入実績</div>
+          </div>
+        </div>
+        <div class="app-desc">業者ごとの発注内容を管理・記録するアプリ。発注履歴の確認、定番商品のワンタップ再注文、AIによる発注文の自動生成が可能。紙やメモアプリで管理していた発注業務をデジタル化し、発注ミスや伝達漏れを防ぐ。</div>
+        <ul class="app-merits">
+          <li>業者別・カテゴリ別の商品管理</li>
+          <li>過去の発注履歴をワンタップで確認・再利用</li>
+          <li>AIが発注内容を自然言語で補助</li>
+          <li>スマートフォン最適化・オフライン対応</li>
+          <li>マニュアル内蔵でスタッフへの引き継ぎが簡単</li>
+        </ul>
+        <div class="app-tag">PWA / Cloudflare Worker / Gemini AI</div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-header">
+          <div class="app-icon">💰</div>
+          <div>
+            <div class="app-name">給与・チップ計算アプリ</div>
+            <div class="app-client">Steak Teppei（ハワイ）導入実績</div>
+          </div>
+        </div>
+        <div class="app-desc">アメリカのチップ文化に対応した給与計算アプリ。勤務時間・残業・チップを自動集計し、従業員ごとの支払い額を算出。Clover POSとAPI連携し、売上データから自動でチップを取り込む。会計事務所への共有もワンクリック。</div>
+        <ul class="app-merits">
+          <li>Clover POS（レジ）と直接API連携しチップを自動取得</li>
+          <li>通常時給・残業時給（1.5倍）を自動計算</li>
+          <li>従業員別・期間別のチップ履歴をグラフで可視化</li>
+          <li>Google Sheetsに自動保存・会計士と共有可能</li>
+          <li>ペイロール期間ごとの集計レポートを自動生成</li>
+        </ul>
+        <div class="app-tag">PWA / Google Apps Script / Clover API</div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-header">
+          <div class="app-icon">📊</div>
+          <div>
+            <div class="app-name">月次棚卸しアプリ</div>
+            <div class="app-client">Steak Teppei（ハワイ）導入実績</div>
+          </div>
+        </div>
+        <div class="app-desc">毎月の在庫棚卸しを効率化するアプリ。商品リストに数量を入力するだけで金額を自動計算し、Google Sheetsに保存。「牛肉の単価を変更して」と入力するだけでAIが商品マスターを自動更新。食材・飲料・備品をカテゴリ別に集計。</div>
+        <ul class="app-merits">
+          <li>商品名・単価・カテゴリをGoogle Sheetsで一元管理</li>
+          <li>数量を入力するだけで金額・合計を自動計算</li>
+          <li>AIチャットで商品マスターの価格変更が自然言語で可能</li>
+          <li>月次レポートをFood・Drink・Container別に自動生成</li>
+          <li>ダーク/ライトモード対応・iPhone最適化</li>
+        </ul>
+        <div class="app-tag">Next.js / Google Sheets API / Gemini AI / Vercel</div>
+      </div>
+
+      <div class="app-card app-card-wide">
+        <div class="app-header">
+          <div class="app-icon">🌐</div>
+          <div>
+            <div class="app-name">Steak Teppei 公式ホームページ</div>
+            <div class="app-client">teppei-usa.com</div>
+          </div>
+        </div>
+        <div class="app-desc">ハワイ・アラモアナセンターの飲食店「Steak Teppei」の公式ホームページ。日英対応・SEO最適化・モバイルファーストで制作。Uber Eats・DoorDashとの連携導線、Googleレビューへの誘導、インフルエンサー向けの情報ページも含む。</div>
+        <ul class="app-merits">
+          <li>日本語・英語の2言語対応</li>
+          <li>デリバリーサービス（Uber Eats / DoorDash）への導線</li>
+          <li>SEO対応（sitemap.xml・robots.txt・構造化データ）</li>
+          <li>スマートフォン最適化・高速表示</li>
+          <li>Googleレビュー平均4.2 / Uber Eats平均4.8を達成</li>
+        </ul>
+        <div class="app-tag">HTML / CSS / Bluehost</div>
+      </div>
+
+    </div>
+
+    <div class="apps-cta fade-in">
+      <div class="apps-cta-inner">
+        <p class="apps-cta-text">これらはすべて、昭宏が現場の課題から設計・開発・運用してきたアプリです。<br>御社の進出先・業種・チーム構成に合わせたアプリを一から作ります。</p>
+        <a href="#contact" class="btn-primary">アプリ開発について相談する</a>
+      </div>
     </div>
   </div>
 </section>
