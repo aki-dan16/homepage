@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>弘西昭宏 | アメリカ進出サポート</title>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0D0D0D;
+  --paper:#F5F0E8;
+  --paper-dark:#EDE7D5;
+  --gold:#B8923A;
+  --gold-light:#D4AC5A;
+  --white:#FFFFFF;
+  --text-mid:#4A4540;
+  --text-light:#8A847A;
+  --border:rgba(184,146,58,0.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Zen Kaku Gothic New',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;line-height:1.8}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(13,13,13,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(184,146,58,0.15)}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:1rem;letter-spacing:0.1em}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;font-weight:300;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold-light);font-size:0.78rem;padding:0.5rem 1.4rem;text-decoration:none;letter-spacing:0.05em;transition:all 0.2s}
+.nav-cta:hover{background:var(--gold);color:var(--ink)}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--ink);display:flex;align-items:center;padding:8rem 4rem 6rem;position:relative;overflow:hidden}
+.hero-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Playfair Display',serif;font-size:28vw;color:rgba(255,255,255,0.02);white-space:nowrap;pointer-events:none;letter-spacing:-0.02em}
+.hero-line{position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero-inner{max-width:760px;position:relative;z-index:1}
+.hero-label{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem}
+.hero-label span{width:40px;height:1px;background:var(--gold)}
+.hero-label p{font-size:0.7rem;letter-spacing:0.2em;color:var(--gold-light);font-weight:400}
+.hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(2.2rem,4.5vw,3.6rem);color:var(--white);line-height:1.4;margin-bottom:1.8rem;font-weight:500}
+.hero h1 em{color:var(--gold-light);font-style:normal;display:block}
+.hero-sub{color:rgba(255,255,255,0.55);font-size:0.95rem;line-height:1.9;margin-bottom:3rem;max-width:580px;font-weight:300}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--ink);font-size:0.85rem;padding:0.9rem 2.2rem;text-decoration:none;letter-spacing:0.05em;transition:all 0.2s;font-weight:500}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.75);font-size:0.85rem;padding:0.9rem 2.2rem;text-decoration:none;transition:all 0.2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-light)}
+.hero-stats{display:flex;gap:3.5rem;margin-top:5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.07)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold-light);line-height:1}
+.stat-label{font-size:0.7rem;color:rgba(255,255,255,0.4);margin-top:0.4rem;letter-spacing:0.05em}
+
+/* SECTIONS */
+section{padding:8rem 4rem}
+.section-label{display:flex;align-items:center;gap:0.8rem;margin-bottom:3rem}
+.section-label span{width:28px;height:1px;background:var(--gold)}
+.section-label p{font-size:0.68rem;letter-spacing:0.2em;color:var(--gold);font-weight:400}
+.section-title{font-family:'Shippori Mincho',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:500;line-height:1.3;margin-bottom:1.2rem}
+.section-sub{color:var(--text-mid);font-size:0.92rem;line-height:1.9;max-width:600px;font-weight:300}
+
+/* ABOUT */
+.about{background:var(--white)}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+.about-text .section-title{color:var(--ink)}
+.about-body{color:var(--text-mid);font-size:0.9rem;line-height:2;margin-top:1.5rem;font-weight:300}
+.about-body p{margin-bottom:1.2rem}
+.about-badge-row{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:2rem}
+.badge{background:var(--paper);border:1px solid var(--border);color:var(--gold);font-size:0.7rem;padding:0.4rem 0.9rem;letter-spacing:0.05em;font-weight:500}
+.about-card{background:var(--ink);padding:3rem;position:relative;overflow:hidden}
+.about-card::before{content:'"';position:absolute;top:-1rem;left:1.5rem;font-family:'Playfair Display',serif;font-size:10rem;color:rgba(184,146,58,0.08);line-height:1;pointer-events:none}
+.about-card blockquote{font-family:'Shippori Mincho',serif;font-size:1.05rem;color:rgba(255,255,255,0.8);line-height:1.9;margin-bottom:2rem;position:relative;z-index:1}
+.about-card-name{font-size:0.75rem;color:var(--gold-light);letter-spacing:0.1em}
+.about-card-sub{font-size:0.68rem;color:rgba(255,255,255,0.3);margin-top:0.3rem}
+.citizen-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(184,146,58,0.08);border:1px solid rgba(184,146,58,0.25);padding:0.6rem 1rem;margin-top:1.8rem}
+.citizen-tag span{font-size:0.75rem;color:var(--gold);letter-spacing:0.03em}
+
+/* RESULTS */
+.results{background:var(--paper-dark)}
+.results-inner{max-width:1100px;margin:0 auto}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,146,58,0.15);margin-top:4rem}
+.result-item{background:var(--paper-dark);padding:2.5rem 2rem;transition:background 0.2s}
+.result-item:hover{background:var(--white)}
+.result-num{font-family:'Playfair Display',serif;font-size:0.85rem;color:var(--gold);margin-bottom:1.2rem;font-weight:500}
+.result-title{font-family:'Shippori Mincho',serif;font-size:1.1rem;color:var(--ink);margin-bottom:0.5rem;font-weight:500;line-height:1.4}
+.result-location{font-size:0.7rem;color:var(--gold);letter-spacing:0.05em;margin-bottom:0.8rem}
+.result-desc{font-size:0.78rem;color:var(--text-mid);line-height:1.8;font-weight:300}
+
+/* SERVICES */
+.services{background:var(--white)}
+.services-inner{max-width:1100px;margin:0 auto}
+.services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:2rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--paper-dark)}
+.service-item{background:var(--white);padding:2.2rem 1.8rem;cursor:default;transition:background 0.2s}
+.service-item:hover{background:var(--paper)}
+.service-num{font-size:0.78rem;color:var(--gold);margin-bottom:1rem;font-family:'Playfair Display',serif}
+.service-name{font-family:'Shippori Mincho',serif;font-size:1.05rem;color:var(--ink);margin-bottom:0.6rem;font-weight:500;line-height:1.4}
+.service-desc{font-size:0.77rem;color:var(--text-mid);line-height:1.8;font-weight:300}
+
+/* SUPPORT */
+.support{background:var(--ink)}
+.support-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.support .section-title{color:var(--white)}
+.support .section-sub{color:rgba(255,255,255,0.45)}
+.support-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem}
+.support-list li{display:flex;align-items:flex-start;gap:1rem;color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.7;font-weight:300;list-style:none}
+.support-list li::before{content:'—';color:var(--gold);flex-shrink:0}
+.support-card{background:rgba(255,255,255,0.03);border:1px solid rgba(184,146,58,0.2);padding:2.5rem}
+.support-card-label{font-size:0.65rem;letter-spacing:0.18em;color:var(--gold);margin-bottom:1.5rem}
+.support-card h3{font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--white);font-weight:500;line-height:1.6;margin-bottom:1.2rem}
+.support-card p{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.9;font-weight:300}
+
+/* PROCESS */
+.process{background:var(--paper)}
+.process-inner{max-width:1100px;margin:0 auto}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4rem;position:relative}
+.steps::before{content:'';position:absolute;top:1.4rem;left:12.5%;right:12.5%;height:1px;background:rgba(184,146,58,0.2)}
+.step{padding:0 1.5rem;text-align:center;position:relative;z-index:1}
+.step-dot{width:2.8rem;height:2.8rem;border-radius:50%;background:var(--paper);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+.step-dot span{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--gold)}
+.step-title{font-family:'Shippori Mincho',serif;font-size:0.95rem;color:var(--ink);margin-bottom:0.5rem;font-weight:500}
+.step-text{font-size:0.75rem;color:var(--text-light);line-height:1.7;font-weight:300}
+
+/* CONTACT */
+.contact{background:var(--ink)}
+.contact-inner{max-width:780px;margin:0 auto}
+.contact .section-label{justify-content:center}
+.contact .section-title{color:var(--white);text-align:center}
+.contact .section-sub{color:rgba(255,255,255,0.45);text-align:center;margin:0 auto 3.5rem}
+.contact-form{background:rgba(255,255,255,0.03);border:1px solid rgba(184,146,58,0.2);padding:3rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
+.form-group{display:flex;flex-direction:column;gap:0.5rem}
+.form-group.full{grid-column:1/-1}
+label{font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:0.08em}
+input,select,textarea{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:0.75rem 1rem;font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.85);transition:border-color 0.2s;-webkit-appearance:none}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.2)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+select option{background:#1a1a1a;color:#fff}
+textarea{resize:vertical;min-height:130px}
+.form-submit{width:100%;background:var(--gold);color:var(--ink);border:none;padding:1rem;font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.88rem;font-weight:500;letter-spacing:0.08em;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
+.form-submit:hover{background:var(--gold-light)}
+.form-note{font-size:0.7rem;color:rgba(255,255,255,0.25);text-align:center;margin-top:1rem}
+
+/* FOOTER */
+footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(184,146,58,0.1)}
+.footer-logo{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:1rem;letter-spacing:0.08em}
+.footer-copy{font-size:0.68rem;color:rgba(255,255,255,0.25)}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  section{padding:5rem 1.5rem}
+  .hero{padding:7rem 1.5rem 5rem}
+  .hero-stats{gap:2rem;flex-wrap:wrap}
+  .about-inner,.support-inner{grid-template-columns:1fr;gap:3rem}
+  .results-grid,.services-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:2rem}
+  .steps::before{display:none}
+  .form-row{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">HIRONISHI AKIHIRO</div>
+  <div class="nav-links">
+    <a href="#about">プロフィール</a>
+    <a href="#results">実績</a>
+    <a href="#services">サービス</a>
+    <a href="#process">進め方</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+  <a href="#contact" class="nav-cta">無料相談を予約</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text">USA</div>
+  <div class="hero-line"></div>
+  <div class="hero-inner fade-in">
+    <div class="hero-label"><span></span><p>アメリカ進出 トータルサポート</p></div>
+    <h1>
+      あなたのビジネスを、<br>
+      <em>アメリカへ連れていく。</em>
+    </h1>
+    <p class="hero-sub">法人設立からビザ取得、不動産交渉、採用、現場立ち上げまで。アメリカ市民として滞在期間の制限なく、軌道に乗るまで現場で伴走します。</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">無料相談を予約する</a>
+      <a href="#services" class="btn-ghost">サービス一覧を見る</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">11年+</div>
+        <div class="stat-label">ハワイでの現地経営経験</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6件</div>
+        <div class="stat-label">日米進出・事業サポート実績</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">アメリカ滞在可能期間</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text fade-in">
+      <div class="section-label"><span></span><p>プロフィール</p></div>
+      <h2 class="section-title">現場を知る人間が、最後まで伴走します。</h2>
+      <div class="about-body">
+        <p>弘西昭宏（ひろにし あきひろ）。日本生まれ、アメリカ市民。ハワイで11年以上にわたり、日本ブランドのアメリカ進出・現地経営に実務責任者として携わってきました。</p>
+        <p>法人設立・ビザ取得・不動産交渉・採用・オペレーション構築・財務管理まで、「進出の全工程」を現場で経験してきた実務家です。コロナ禍では売上が前年比▲98%に落ちながらも、助成金獲得・賃料交渉・組織再編によって事業を立て直し、コロナ前比160%の売上回復を実現しました。</p>
+        <p>戦略を提案するだけでなく、キャッシャーも掃除も——軌道に乗るまで現場に入り込みます。</p>
+      </div>
+      <div class="citizen-tag">
+        <span>🇺🇸 アメリカ市民（日米二重国籍）として、滞在期間の制限なくサポート可能</span>
+      </div>
+      <div class="about-badge-row">
+        <span class="badge">法人設立</span>
+        <span class="badge">ビザサポート</span>
+        <span class="badge">不動産交渉</span>
+        <span class="badge">採用・HR</span>
+        <span class="badge">現場立ち上げ</span>
+        <span class="badge">財務管理</span>
+        <span class="badge">英語対応</span>
+        <span class="badge">現地ネットワーク</span>
+      </div>
+    </div>
+    <div class="about-card fade-in">
+      <blockquote>「アドバイスだけのコンサルタントではありません。私自身が現地で法人を設立し、不動産を交渉し、スタッフを採用し、コロナ禍を乗り越え、訴訟を解決してきました。進出後に待ち受けるリスクを、誰よりもリアルに知っています。」</blockquote>
+      <div class="about-card-name">弘西 昭宏</div>
+      <div class="about-card-sub">アメリカ進出サポート コンサルタント</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+  <div class="results-inner">
+    <div class="fade-in">
+      <div class="section-label"><span></span><p>実績</p></div>
+      <h2 class="section-title">これまでのサポート実績</h2>
+      <p class="section-sub">日本のコンテンツ・飲食ブランドの海外展開を、企画段階から現場オペレーションまで一貫してサポートしてきました。</p>
+    </div>
+    <div class="results-grid fade-in">
+      <div class="result-item">
+        <div class="result-num">01</div>
+        <div class="result-title">Bokete<br>Japan Expo 出展</div>
+        <div class="result-location">フランス・パリ</div>
+        <div class="result-desc">日本のWebサービス「Bokete」のフランス「Japan Expo」への出展を企画・主導。来場者20万人規模のイベントで現地リテーラー・マーケターと連携し、数日間のプロモーションを実施。英語・中国語版のリリースにも貢献。</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">02</div>
+        <div class="result-title">ホットドッグ店<br>アラモアナ出店</div>
+        <div class="result-location">ハワイ・アラモアナセンター</div>
+        <div class="result-desc">日系ホットドッグブランドのアラモアナセンターへの出店をサポート。物件選定から許認可取得、スタッフ採用、オペレーション構築まで一気通貫で対応。</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">03</div>
+        <div class="result-title">焼肉店<br>アラモアナ出店</div>
+        <div class="result-location">ハワイ・アラモアナセンター</div>
+        <div class="result-desc">日系焼肉ブランドのハワイ進出をサポート。現地の商習慣・衛生許可・内装規制に対応しながら、開業までのプロセスを現場でリード。</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">04</div>
+        <div class="result-title">日系パスタ店<br>事業サポート</div>
+        <div class="result-location">ハワイ</div>
+        <div class="result-desc">日系パスタブランドのハワイ事業立ち上げ・運営をサポート。メニュー設計から現地スタッフ採用、日々のオペレーション改善まで伴走型で支援。</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">05</div>
+        <div class="result-title">Steak Teppei<br>Makai Market 出店</div>
+        <div class="result-location">ハワイ・アラモアナセンター</div>
+        <div class="result-desc">日本の鉄板焼きブランド「Steak Teppei」のアラモアナセンターMakai Marketへの出店を主導。商業施設との長期交渉から設計施工・採用・開業まで全工程を担当。</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">06</div>
+        <div class="result-title">Teppei USA Inc.<br>Vice-President 11年+</div>
+        <div class="result-location">ハワイ・アラモアナセンター</div>
+        <div class="result-desc">法人設立・不動産交渉・採用・財務管理・危機対応まで全権を担当。コロナ禍で売上▲98%から事業を立て直し、コロナ前比160%の売上回復を実現。Google 4.2 / Uber Eats 4.8。JAL機内誌Skyward掲載。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="services-header fade-in">
+      <div>
+        <div class="section-label"><span></span><p>サービス</p></div>
+        <h2 class="section-title">進出に必要な、すべてを。</h2>
+      </div>
+      <p class="section-sub" style="margin:0">初期調査から現地での実務オペレーションまで、ワンストップで対応します。</p>
+    </div>
+    <div class="services-grid fade-in">
+      <div class="service-item">
+        <div class="service-num">01</div>
+        <div class="service-name">市場調査・参入戦略</div>
+        <div class="service-desc">ターゲット市場の分析、競合調査、最適な参入方法の提案。現地11年の肌感覚とデータを組み合わせた実行可能な戦略を設計します。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">02</div>
+        <div class="service-name">法人設立・法務対応</div>
+        <div class="service-desc">LLC・C-Corp等の法人設立手続き全般。信頼できる現地弁護士・会計士ネットワークを活用し、登記から各種契約まで対応します。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">03</div>
+        <div class="service-name">ビザ・在留資格サポート</div>
+        <div class="service-desc">E-2・L-1・O-1など各種ビザの申請サポート。複数の日本人スタッフのビザ申請を主導してきた実務経験をもとに支援します。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">04</div>
+        <div class="service-name">不動産・物件取得</div>
+        <div class="service-desc">事務所・店舗・倉庫など事業用不動産の調査・交渉をサポート。アラモアナセンター（Brookfield）との2年間の交渉経験を活かします。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">05</div>
+        <div class="service-name">採用・組織構築</div>
+        <div class="service-desc">現地ネットワークを活かした採用支援。7カ国以上の多国籍チームを統率してきたノウハウで、現地スタッフの採用から教育まで対応します。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">06</div>
+        <div class="service-name">現場立ち上げサポート</div>
+        <div class="service-desc">開業後に最も失敗が多い「現場立ち上げフェーズ」に特化。キャッシャーも掃除も——軌道に乗るまで現場に入り込んで伴走します。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">07</div>
+        <div class="service-name">許認可・行政手続き</div>
+        <div class="service-desc">ビジネスライセンス、ヘルスパーミット、リカーライセンス等の取得をサポート。業種別の許認可取得の実務経験があります。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">08</div>
+        <div class="service-name">翻訳・交渉代行</div>
+        <div class="service-desc">契約書・マーケティング資料の翻訳、現地パートナーとの交渉代行。ビジネスレベルの英語力で現地商習慣を踏まえた実務対応が可能です。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">09</div>
+        <div class="service-name">スポットコンサルティング</div>
+        <div class="service-desc">「ここだけ相談したい」というご要望にも対応。単発・オンラインでのご相談もお気軽にどうぞ。初回60分は無料です。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="support">
+  <div class="support-inner">
+    <div class="fade-in">
+      <div class="section-label"><span></span><p>強み</p></div>
+      <h2 class="section-title">なぜ、私に頼むのか。</h2>
+      <p class="section-sub">アドバイスだけのコンサルタントとは違います。</p>
+      <ul class="support-list">
+        <li>アメリカ市民として、滞在期間の制限なく現地に入れる</li>
+        <li>法人設立・ビザ・不動産・採用・財務すべてを自分でやってきた</li>
+        <li>コロナ禍で売上▲98%から事業を立て直した危機対応の実績</li>
+        <li>Brookfield等の大手商業施設との交渉経験</li>
+        <li>7カ国以上の多国籍チームを10年以上マネジメント</li>
+        <li>キャッシャーも掃除も——現場に入り込む姿勢</li>
+        <li>日本語・英語バイリンガルで日米双方に対応</li>
+      </ul>
+    </div>
+    <div class="support-card fade-in">
+      <div class="support-card-label">COMMITMENT</div>
+      <h3>計画を作るだけでなく、実行・定着・立て直しまで。</h3>
+      <p>「正しいが実行されない提案」が生まれる構造を、経営と現場の両側から理解しています。そのため、理想論ではなく現場が受け入れられる形に落とし込み、定着させることを重視して行動してきました。</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="fade-in">
+      <div class="section-label"><span></span><p>進め方</p></div>
+      <h2 class="section-title">4ステップで、夢を現実に。</h2>
+      <p class="section-sub">初回無料相談から始まり、段階的に進出をサポートします。</p>
+    </div>
+    <div class="steps fade-in">
+      <div class="step">
+        <div class="step-dot"><span>1</span></div>
+        <div class="step-title">無料相談</div>
+        <div class="step-text">現状・目標・課題をお聞きし、最適なプランをご提案します</div>
+      </div>
+      <div class="step">
+        <div class="step-dot"><span>2</span></div>
+        <div class="step-title">戦略設計</div>
+        <div class="step-text">市場調査・参入戦略・スケジュールを策定します</div>
+      </div>
+      <div class="step">
+        <div class="step-dot"><span>3</span></div>
+        <div class="step-title">実務サポート</div>
+        <div class="step-text">法人設立・ビザ・拠点確保などを並行して進めます</div>
+      </div>
+      <div class="step">
+        <div class="step-dot"><span>4</span></div>
+        <div class="step-title">現場伴走</div>
+        <div class="step-text">開業後の現場立ち上げから軌道に乗るまで伴走します</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-label"><span></span><p>お問い合わせ</p></div>
+    <h2 class="section-title">まずは、無料相談から。</h2>
+    <p class="section-sub">アメリカ進出に関するご不明点・ご相談は何でもお気軽にどうぞ。初回オンライン相談（60分）は無料です。</p>
+    <div class="contact-form fade-in">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>お名前 *</label>
+            <input type="text" name="name" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label>会社名</label>
+            <input type="text" name="company" placeholder="株式会社〇〇">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>メールアドレス *</label>
+            <input type="email" name="email" placeholder="example@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>ご興味のあるサービス</label>
+            <select name="service">
+              <option value="">選択してください</option>
+              <option>市場調査・参入戦略</option>
+              <option>法人設立・法務対応</option>
+              <option>ビザ・在留資格サポート</option>
+              <option>不動産・物件取得</option>
+              <option>採用・組織構築</option>
+              <option>現場立ち上げサポート</option>
+              <option>スポットコンサルティング</option>
+              <option>その他</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label>ご相談内容 *</label>
+            <textarea name="message" placeholder="現在の状況やご相談内容をご記入ください" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">無料相談を申し込む</button>
+      </form>
+      <p class="form-note">通常2営業日以内にご返信いたします。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">HIRONISHI AKIHIRO</div>
+  <div class="footer-copy">© 2026 Akihiro Hironishi. All rights reserved.</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
