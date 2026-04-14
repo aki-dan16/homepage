@@ -96,6 +96,10 @@ section{padding:8rem 4rem}
 .service-name{font-family:'Shippori Mincho',serif;font-size:1.05rem;color:var(--ink);margin-bottom:0.6rem;font-weight:500;line-height:1.4}
 .service-desc{font-size:0.77rem;color:var(--text-mid);line-height:1.8;font-weight:300}
 
+.service-category-label{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem}
+.service-cat-line{flex:1;height:1px;background:var(--border)}
+.service-cat-text{font-size:0.72rem;letter-spacing:0.15em;color:var(--gold);white-space:nowrap;font-weight:500}
+
 /* SUPPORT */
 .support{background:var(--ink)}
 .support-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
@@ -305,7 +309,7 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
       </div>
       <div class="result-item">
         <div class="result-num">05</div>
-        <div class="result-title">Steak Teppei<br>Makai Market 出店</div>
+        <div class="result-title">Sakura Dining<br>Makai Market 出店</div>
         <div class="result-location">ハワイ・アラモアナセンター</div>
         <div class="result-desc">日本の鉄板焼きブランド「Steak Teppei」のアラモアナセンターMakai Marketへの出店を主導。商業施設との長期交渉から設計施工・採用・開業まで全工程を担当。</div>
       </div>
@@ -327,7 +331,13 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
         <div class="section-label"><span></span><p>サービス</p></div>
         <h2 class="section-title">進出に必要な、すべてを。</h2>
       </div>
-      <p class="section-sub" style="margin:0">初期調査から現地での実務オペレーションまで、ワンストップで対応します。</p>
+      <p class="section-sub" style="margin:0">コンサルティングから制作・開発まで、ワンストップで対応します。</p>
+    </div>
+
+    <div class="service-category-label fade-in">
+      <span class="service-cat-line"></span>
+      <span class="service-cat-text">コンサルティング</span>
+      <span class="service-cat-line"></span>
     </div>
     <div class="services-grid fade-in">
       <div class="service-item">
@@ -376,6 +386,44 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
         <div class="service-desc">「ここだけ相談したい」というご要望にも対応。単発・オンラインでのご相談もお気軽にどうぞ。初回60分は無料です。</div>
       </div>
     </div>
+
+    <div class="service-category-label fade-in" style="margin-top:4rem">
+      <span class="service-cat-line"></span>
+      <span class="service-cat-text">制作・開発</span>
+      <span class="service-cat-line"></span>
+    </div>
+    <div class="services-grid fade-in">
+      <div class="service-item">
+        <div class="service-num">10</div>
+        <div class="service-name">ホームページ制作</div>
+        <div class="service-desc">日英対応・SEO最適化・モバイルファーストで制作。独自ドメイン取得からGoogle ビジネスプロフィール登録まで一括対応します。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">11</div>
+        <div class="service-name">名刺・ブランディングデザイン</div>
+        <div class="service-desc">ロゴをもとに名刺・チラシ・メニューなどのデザインを制作。印刷手配まで対応します。日英両面デザインも可能です。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">12</div>
+        <div class="service-name">SNS・デリバリー初期設定</div>
+        <div class="service-desc">Instagram・LinkedIn・FacebookなどSNSアカウントの開設・初期設定。Uber Eats・DoorDash・Grubhubへの出店登録もサポートします。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">13</div>
+        <div class="service-name">業務アプリ開発</div>
+        <div class="service-desc">発注管理・チャット・給与計算・棚卸しなど、御社の業務に合わせたカスタムアプリを開発。既製品では対応できない現場の課題を解決します。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">14</div>
+        <div class="service-name">POSシステム導入</div>
+        <div class="service-desc">Clover・Square・Toastなど業種に合ったPOSシステムの選定・導入・スタッフ教育まで対応。デリバリーサービスとの連携設定も含みます。</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">15</div>
+        <div class="service-name">契約書・書類テンプレート作成</div>
+        <div class="service-desc">コンサルティング契約書・雇用契約書・秘密保持契約書（NDA）・請求書テンプレートを英語で作成。現地の商習慣に沿った内容で提供します。</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -420,14 +468,14 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
           <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
             <rect width="280" height="200" fill="#111318"/>
             <rect x="0" y="0" width="280" height="36" fill="#1a1410"/>
-            <text x="14" y="15" font-size="8" fill="#f0c080" font-family="monospace" font-weight="bold" letter-spacing="1">STEAK TEPPEI CHAT</text>
+            <text x="14" y="15" font-size="8" fill="#f0c080" font-family="monospace" font-weight="bold" letter-spacing="1">SAKURA DINING CHAT</text>
             <circle cx="252" cy="11" r="4" fill="#22c55e"/>
             <text x="260" y="15" font-size="7" fill="#4a5068">6</text>
             <text x="14" y="26" font-size="7" fill="#4a5068">6 online now</text>
             <rect x="0" y="36" width="280" height="1" fill="#3d2510"/>
             <rect x="10" y="48" width="180" height="34" rx="8" fill="#2d1b0e"/>
             <circle cx="22" cy="58" r="7" fill="#8B4513"/>
-            <text x="20" y="61" font-size="7" fill="#f0c080" text-anchor="middle">K</text>
+            <text x="20" y="61" font-size="7" fill="#f0c080" text-anchor="middle">J</text>
             <text x="34" y="57" font-size="7" fill="#f0c080">日本語</text>
             <text x="34" y="69" font-size="8" fill="#e8d4b8">グリルが壊れました。</text>
             <text x="34" y="79" font-size="7" fill="#6b4a2a" font-style="italic">AI翻訳済み ✓</text>
@@ -443,7 +491,7 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
             <text x="76" y="147" font-size="8" fill="#e8f4ff">On my way! 2 min.</text>
             <rect x="10" y="162" width="190" height="28" rx="8" fill="#1e3a1e"/>
             <circle cx="22" cy="175" r="7" fill="#1e4a1e"/>
-            <text x="20" y="178" font-size="7" fill="#97c459" text-anchor="middle">L</text>
+            <text x="20" y="178" font-size="7" fill="#97c459" text-anchor="middle">C</text>
             <text x="34" y="171" font-size="7" fill="#5dcaa5">中文</text>
             <text x="34" y="183" font-size="8" fill="#9fe1cb">好的，我马上去。</text>
           </svg>
@@ -471,8 +519,8 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
           <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
             <rect width="280" height="200" fill="#0f1117"/>
             <rect x="0" y="0" width="280" height="36" fill="#171b24"/>
-            <text x="14" y="15" font-size="8" fill="#f97316" font-family="monospace" font-weight="bold" letter-spacing="1">ST ORDER</text>
-            <text x="14" y="27" font-size="7" fill="#4a5068">Steak Teppei · Ala Moana</text>
+            <text x="14" y="15" font-size="8" fill="#f97316" font-family="monospace" font-weight="bold" letter-spacing="1">SD ORDER</text>
+            <text x="14" y="27" font-size="7" fill="#4a5068">Sakura Dining · Ala Moana</text>
             <text x="230" y="20" font-size="7" fill="#4a5068">v5.13</text>
             <rect x="0" y="36" width="280" height="1" fill="rgba(255,255,255,0.07)"/>
             <text x="14" y="52" font-size="7" fill="#4a5068" letter-spacing="1">TODAY'S ORDERS</text>
@@ -480,7 +528,7 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
             <text x="18" y="72" font-size="8" fill="#e8eaf0" font-weight="500">Yoshida Meats</text>
             <rect x="210" y="64" width="52" height="14" rx="4" fill="rgba(34,197,94,0.15)"/>
             <text x="236" y="74" font-size="7" fill="#22c55e" text-anchor="middle">Sent</text>
-            <text x="18" y="83" font-size="7" fill="#8892a4">Ribeye 20lbs · Tenderloin 10lbs</text>
+            <text x="18" y="83" font-size="7" fill="#8892a4">Ribeye 20lbs · Spring Mix 10lbs</text>
             <text x="18" y="93" font-size="6" fill="#4a5068">Mon delivery · 6:00 AM</text>
             <rect x="10" y="102" width="260" height="38" rx="6" fill="#171b24" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
             <text x="18" y="116" font-size="8" fill="#e8eaf0" font-weight="500">Hawaii Produce</text>
@@ -532,13 +580,13 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
             <text x="14" y="107" font-size="7" fill="#4a5068" letter-spacing="0.5">EMPLOYEE BREAKDOWN</text>
             <rect x="0" y="108" width="280" height="1" fill="rgba(255,255,255,0.05)"/>
             <rect x="10" y="112" width="260" height="16" rx="0" fill="transparent"/>
-            <text x="18" y="123" font-size="8" fill="#e8eaf0">Kacee</text>
+            <text x="18" y="123" font-size="8" fill="#e8eaf0">Jessica</text>
             <text x="220" y="123" font-size="8" fill="#eab308" font-family="monospace">$312.40</text>
             <rect x="10" y="128" width="260" height="0.5" fill="rgba(255,255,255,0.05)"/>
             <text x="18" y="140" font-size="8" fill="#e8eaf0">Maria</text>
             <text x="220" y="140" font-size="8" fill="#eab308" font-family="monospace">$298.60</text>
             <rect x="10" y="145" width="260" height="0.5" fill="rgba(255,255,255,0.05)"/>
-            <text x="18" y="157" font-size="8" fill="#e8eaf0">Liang</text>
+            <text x="18" y="157" font-size="8" fill="#e8eaf0">Carlos</text>
             <text x="220" y="157" font-size="8" fill="#eab308" font-family="monospace">$267.20</text>
             <rect x="10" y="162" width="260" height="0.5" fill="rgba(255,255,255,0.05)"/>
             <text x="18" y="174" font-size="8" fill="#8892a4">+ 3 more</text>
@@ -570,7 +618,7 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
           <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
             <rect width="280" height="200" fill="#f3f2ef"/>
             <rect x="0" y="0" width="280" height="36" fill="#fff" stroke="#e5e3de" stroke-width="0.5"/>
-            <text x="14" y="15" font-size="8" fill="#1a1917" font-weight="500">Steak Teppei</text>
+            <text x="14" y="15" font-size="8" fill="#1a1917" font-weight="500">Sakura Dining</text>
             <text x="14" y="27" font-size="7" fill="#9c9a92">Inventory · Apr 2026</text>
             <rect x="220" y="8" width="50" height="18" rx="3" fill="#1a1917"/>
             <text x="245" y="20" font-size="8" fill="#fff" text-anchor="middle" font-weight="500">Save</text>
@@ -586,7 +634,7 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
             <text x="225" y="102" font-size="10" fill="#1a1917" text-anchor="middle" font-family="monospace">8</text>
             <text x="246" y="102" font-size="7" fill="#6b6860">lbs</text>
             <rect x="10" y="118" width="260" height="26" rx="5" fill="#fff" stroke="#e5e3de" stroke-width="0.5"/>
-            <text x="18" y="133" font-size="8" fill="#1a1917" font-weight="500">Tenderloin</text>
+            <text x="18" y="133" font-size="8" fill="#1a1917" font-weight="500">Spring Mix</text>
             <text x="18" y="142" font-size="7" fill="#9c9a92">$28.00 / lb</text>
             <rect x="210" y="123" width="30" height="16" rx="3" fill="#f3f2ef"/>
             <text x="225" y="134" font-size="10" fill="#1a1917" text-anchor="middle" font-family="monospace">5</text>
@@ -621,35 +669,12 @@ footer{background:rgba(0,0,0,0.97);padding:3rem 4rem;display:flex;align-items:ce
       </div>
 
       <div class="app-card app-card-wide">
-        <div class="app-mockup" style="background:#0d0d0d;">
-          <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-            <rect width="280" height="160" fill="#0d0d0d"/>
-            <rect x="0" y="0" width="280" height="22" fill="#1a1a1a"/>
-            <circle cx="12" cy="11" r="4" fill="#ef4444"/>
-            <circle cx="24" cy="11" r="4" fill="#eab308"/>
-            <circle cx="36" cy="11" r="4" fill="#22c55e"/>
-            <rect x="60" y="6" width="160" height="10" rx="3" fill="#2a2a2a"/>
-            <text x="140" y="14" font-size="7" fill="#666" text-anchor="middle">teppei-usa.com</text>
-            <text x="14" y="40" font-size="7" fill="#666" letter-spacing="1">STEAK TEPPEI · ALA MOANA</text>
-            <text x="14" y="62" font-size="16" fill="#fff" font-family="Georgia,serif">Authentic Japanese</text>
-            <text x="14" y="80" font-size="16" fill="#f97316" font-family="Georgia,serif">Steak Experience</text>
-            <text x="14" y="96" font-size="7" fill="#888">Ala Moana Center · Makai Market · Honolulu, Hawaii</text>
-            <rect x="14" y="104" width="72" height="18" rx="3" fill="#f97316"/>
-            <text x="50" y="116" font-size="8" fill="#000" text-anchor="middle" font-weight="bold">Order Now</text>
-            <rect x="92" y="104" width="50" height="18" rx="3" fill="transparent" stroke="#444" stroke-width="0.5"/>
-            <text x="117" y="116" font-size="8" fill="#ccc" text-anchor="middle">Menu</text>
-            <rect x="14" y="130" width="54" height="22" rx="4" fill="#1a1a1a"/>
-            <text x="41" y="141" font-size="10" fill="#f97316" text-anchor="middle" font-weight="bold">4.2</text>
-            <text x="41" y="149" font-size="6" fill="#666" text-anchor="middle">Google</text>
-            <rect x="74" y="130" width="54" height="22" rx="4" fill="#1a1a1a"/>
-            <text x="101" y="141" font-size="10" fill="#22c55e" text-anchor="middle" font-weight="bold">4.8</text>
-            <text x="101" y="149" font-size="6" fill="#666" text-anchor="middle">Uber Eats</text>
-            <rect x="134" y="130" width="54" height="22" rx="4" fill="#1a1a1a"/>
-            <text x="161" y="141" font-size="10" fill="#3b82f6" text-anchor="middle" font-weight="bold">4.7</text>
-            <text x="161" y="149" font-size="6" fill="#666" text-anchor="middle">DoorDash</text>
-            <text x="210" y="138" font-size="6" fill="#666">FEATURED IN</text>
-            <text x="210" y="150" font-size="8" fill="#888" font-style="italic">JAL Skyward · Nov 2024</text>
-          </svg>
+        <div class="app-mockup" style="background:#0d0d0d;display:flex;align-items:center;justify-content:center;min-height:120px;">
+          <a href="https://teppei-usa.com/" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;gap:0.8rem;text-decoration:none;">
+            <div style="font-size:1.2rem;color:rgba(255,255,255,0.3);">🌐</div>
+            <div style="font-size:0.85rem;color:#f97316;letter-spacing:0.05em;font-family:monospace;">teppei-usa.com</div>
+            <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);letter-spacing:0.08em;">サイトを開く ↗</div>
+          </a>
         </div>
         <div>
         <div class="app-header">
